@@ -1,0 +1,22 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Dog {
+  id: Int
+  name: String
+}
+
+input DogInput {
+  name: String!
+}
+
+type Mutation {
+  addDog(dog: DogInput!): Dog!
+  deleteDog(id: Int!): Int!
+}
+
+type Query {
+  getDog(id: Int!): Dog
+  getDogs: [Dog!]!
+}

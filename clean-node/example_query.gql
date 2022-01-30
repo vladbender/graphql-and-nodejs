@@ -1,0 +1,35 @@
+query GetDog {
+  getDog(id: 1) {
+  	id
+    name
+    favouriteToy {
+      id
+      name
+    }
+  }
+}
+
+query GetDogs {
+  getDogs {
+    id
+    name
+    favouriteToy {
+      id
+      name
+    }
+  }
+}
+
+mutation AddDog($dog: DogInput) {
+  addDog(dog: $dog) {
+    id
+    name
+  }
+}
+
+mutation AddToy($toy: ToyInput) {
+ 	addToy(toy: $toy) {
+    id
+    name
+  }
+}

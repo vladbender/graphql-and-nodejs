@@ -1,0 +1,29 @@
+# Эта схема написана руками, её загружает сервер
+type Query {
+  getDog(id: ID!): Dog
+  getDogs: [Dog!]!
+}
+
+type Mutation {
+  addDog(dog: DogInput): Dog
+  addToy(toy: ToyInput): Toy
+}
+
+input DogInput {
+  name: String
+}
+
+input ToyInput {
+  name: String
+}
+
+type Dog {
+  id: ID
+  name: String
+  favouriteToy: Toy
+}
+
+type Toy {
+  id: ID
+  name: String
+}
